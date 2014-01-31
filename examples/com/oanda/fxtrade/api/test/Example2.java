@@ -46,6 +46,8 @@ public final class Example2 implements Observer {
 	// The current rates table
 	RateTable rateTable;
 
+	boolean show_debug_msg = false;
+
 public void caseChangeAccount() {
 
 	if (!fxclient.isLoggedIn()) {
@@ -566,6 +568,12 @@ public void caseMarketClose() {
 		// submit the market order close request
 		account.close(marketOrder);
 		System.out.println("Example: market order " + ticket + " closed successfully");
+
+		if (show_debug_msg) {
+			// display resulting close transaction response
+			Transaction resultOfGetCloseTrans = account.getTransactionWithId(marketOrder.getClose().getTransactionNumber());
+			System.out.println("Example: close response transaction: " + resultOfGetCloseTrans);
+		}
 	}
 	catch (SessionException se) {
 		System.err.println("Example: market order close failed: " + se);
@@ -791,13 +799,23 @@ public void caseViewLadderedPrices() {
         System.err.println("Example: limit order cancellation failed: " + e);
     }
 }
+
+public void caseToggleDebugMsg() {
+	if (show_debug_msg) {
+		show_debug_msg = false;
+		System.out.println("Example: debug message turned off.");
+	} else {
+		show_debug_msg = true;
+		System.out.println("Example: debug message turned on.");
+	}
+}
 /*************************************************************************/
 /* INIT()                                                                */
 /*************************************************************************/
 private void init(String username, String password) {
 
 	try {
-        com.oanda.fxtrade.api.Configuration.setVersion("2.3.9");
+        com.oanda.fxtrade.api.Configuration.setVersion("2.5.4");
 
 		System.out.println("Example: creating FXClient object...");
 
@@ -817,7 +835,7 @@ private void init(String username, String password) {
 		System.out.println("Example: logging in...");
 		fxclient.setProxy(false);
 		fxclient.setWithRateThread(true);
-		fxclient.login(username, password, "Example2 Test");
+		fxclient.login(username, password, "Example2 Test", null, "James");
 
 		// save the password in case a reconnection is needed later
 		this.username = username;
@@ -883,6 +901,7 @@ private void startMenuThread() {
 				"16. View Laddered Prices\n" +              //
 				"\n" +                                      //
 				"0.  Show Menu\n" +                         //
+				"88. Toggle Debug Message\n" +				//
 				"99. Quit"                                  //
 			;
 			System.out.println(MENU);
@@ -946,6 +965,9 @@ private void startMenuThread() {
 						case 16 :
 						    caseViewLadderedPrices();
 						    break;
+						case 88 :
+							caseToggleDebugMsg();
+							break;
 						case 99 :
 							System.out.println("Exiting Program");
 							System.exit(0);
