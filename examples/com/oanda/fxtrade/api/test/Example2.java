@@ -815,7 +815,7 @@ public void caseToggleDebugMsg() {
 private void init(String username, String password) {
 
 	try {
-        com.oanda.fxtrade.api.Configuration.setVersion("2.5.4");
+        com.oanda.fxtrade.api.Configuration.setVersion("2.3.9");
 
 		System.out.println("Example: creating FXClient object...");
 
@@ -835,7 +835,7 @@ private void init(String username, String password) {
 		System.out.println("Example: logging in...");
 		fxclient.setProxy(false);
 		fxclient.setWithRateThread(true);
-		fxclient.login(username, password, "Example2 Test", null, "James");
+		fxclient.login(username, password, "Example2 Test");
 
 		// save the password in case a reconnection is needed later
 		this.username = username;
