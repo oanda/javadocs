@@ -103,87 +103,110 @@ the number of ticks within the period.</div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========== METHOD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="method_summary">
-<!--   -->
-</a>
-<h3>Method Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>java.lang.Object</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#clone()">clone</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/CandlePoint.html" title="interface in com.oanda.fxtrade.api">CandlePoint</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getCandlePoint()">getCandlePoint</a></strong>()</code>
-<div class="block">Returns the associated CandlePoint for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getClose()">getClose</a></strong>()</code>
-<div class="block">Returns the FXTick containing the closing bid and ask price for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getCorrected()">getCorrected</a></strong>()</code>
-<div class="block">A flag to indicate whether the FXHistoryPoint has been corrected in
-  the vector context that it is part of.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMax()">getMax</a></strong>()</code>
-<div class="block">Returns the FXTick containing the maximum bid and ask price for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMin()">getMin</a></strong>()</code>
-<div class="block">Returns the FXTick containing the minimum bid and ask price for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/MinMaxPoint.html" title="interface in com.oanda.fxtrade.api">MinMaxPoint</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMinMaxPoint()">getMinMaxPoint</a></strong>()</code>
-<div class="block">Returns the associated MinMaxPoint for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getOpen()">getOpen</a></strong>()</code>
-<div class="block">Returns the FXTick containing the opening bid and ask price for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getTimestamp()">getTimestamp</a></strong>()</code>
-<div class="block">Returns the opening timestamp for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getVolume()">getVolume</a></strong>()</code>
-<div class="block">Returns the volume for this FXHistoryPoint.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#setCorrected(boolean)">setCorrected</a></strong>(boolean&nbsp;aCorrected)</code>
-<div class="block">Set the corrected flag for this FXHistoryPoint</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#toString()">toString</a></strong>()</code>
-<div class="block">Returns a String representation of this <CODE>FXHistoryPoint</CODE> as follows:
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/CandlePoint.html" title="interface in com.oanda.fxtrade.api">CandlePoint</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getCandlePoint()">getCandlePoint</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the associated CandlePoint for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getClose()">getClose</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the FXTick containing the closing bid and ask price for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getCorrected()">getCorrected</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A flag to indicate whether the FXHistoryPoint has been corrected in
+  the vector context that it is part of.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMax()">getMax</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the FXTick containing the maximum bid and ask price for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMin()">getMin</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the FXTick containing the minimum bid and ask price for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/MinMaxPoint.html" title="interface in com.oanda.fxtrade.api">MinMaxPoint</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getMinMaxPoint()">getMinMaxPoint</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the associated MinMaxPoint for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getOpen()">getOpen</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the FXTick containing the opening bid and ask price for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getTimestamp()">getTimestamp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the tick volume for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#getVolume()">getVolume</A></B>()</CODE>
+
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the opening timestamp for this FXHistoryPoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#setCorrected(boolean)">setCorrected</A></B>(boolean&nbsp;aCorrected)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the corrected flag for this FXHistoryPoint</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/oanda/fxtrade/api/FXHistoryPoint.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a String representation of this <CODE>FXHistoryPoint</CODE> as follows:
  <BR>
  <CODE>timestamp max_bid max_ask open_bid open_ask close_bid close_ask min_bid min_ask volume</CODE></div>
 </td>
@@ -241,91 +264,138 @@ the number of ticks within the period.</div>
 <pre>boolean&nbsp;getCorrected()</pre>
 <div class="block">A flag to indicate whether the FXHistoryPoint has been corrected in
   the vector context that it is part of.  Re-correction is supposed to
-  be harmless.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>corrected flag</dd></dl>
-</li>
-</ul>
-<a name="getMax()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getMax</h4>
-<pre><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a>&nbsp;getMax()</pre>
-<div class="block">Returns the FXTick containing the maximum bid and ask price for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="getMin()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getMin</h4>
-<pre><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a>&nbsp;getMin()</pre>
-<div class="block">Returns the FXTick containing the minimum bid and ask price for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="getMinMaxPoint()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getMinMaxPoint</h4>
-<pre><a href="../../../../com/oanda/fxtrade/api/MinMaxPoint.html" title="interface in com.oanda.fxtrade.api">MinMaxPoint</a>&nbsp;getMinMaxPoint()</pre>
-<div class="block">Returns the associated MinMaxPoint for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="getOpen()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getOpen</h4>
-<pre><a href="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</a>&nbsp;getOpen()</pre>
-<div class="block">Returns the FXTick containing the opening bid and ask price for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="getTimestamp()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getTimestamp</h4>
-<pre>long&nbsp;getTimestamp()</pre>
-<div class="block">Returns the opening timestamp for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="getVolume()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getVolume</h4>
-<pre>long&nbsp;getVolume()</pre>
-<div class="block">Returns the volume for this FXHistoryPoint.</div>
-</li>
-</ul>
-<a name="setCorrected(boolean)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setCorrected</h4>
-<pre>void&nbsp;setCorrected(boolean&nbsp;aCorrected)</pre>
-<div class="block">Set the corrected flag for this FXHistoryPoint</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aCorrected</code> - (new value)</dd></dl>
-</li>
-</ul>
-<a name="toString()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>toString</h4>
-<pre>java.lang.String&nbsp;toString()</pre>
-<div class="block">Returns a String representation of this <CODE>FXHistoryPoint</CODE> as follows:
+  be harmless.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>corrected flag</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMax()"><!-- --></A><H3>
+getMax</H3>
+<PRE>
+<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A> <B>getMax</B>()</PRE>
+<DL>
+<DD>Returns the FXTick containing the maximum bid and ask price for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMin()"><!-- --></A><H3>
+getMin</H3>
+<PRE>
+<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A> <B>getMin</B>()</PRE>
+<DL>
+<DD>Returns the FXTick containing the minimum bid and ask price for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMinMaxPoint()"><!-- --></A><H3>
+getMinMaxPoint</H3>
+<PRE>
+<A HREF="../../../../com/oanda/fxtrade/api/MinMaxPoint.html" title="interface in com.oanda.fxtrade.api">MinMaxPoint</A> <B>getMinMaxPoint</B>()</PRE>
+<DL>
+<DD>Returns the associated MinMaxPoint for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOpen()"><!-- --></A><H3>
+getOpen</H3>
+<PRE>
+<A HREF="../../../../com/oanda/fxtrade/api/FXTick.html" title="interface in com.oanda.fxtrade.api">FXTick</A> <B>getOpen</B>()</PRE>
+<DL>
+<DD>Returns the FXTick containing the opening bid and ask price for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimestamp()"><!-- --></A><H3>
+getTimestamp</H3>
+<PRE>
+long <B>getTimestamp</B>()</PRE>
+<DL>
+<DD>Returns the opening timestamp for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVolume()"><!-- --></A><H3>
+getVolume</H3>
+<PRE>
+long <B>getVolume</B>()</PRE>
+<DL>
+<DD>Returns the tick volume for this FXHistoryPoint.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCorrected(boolean)"><!-- --></A><H3>
+setCorrected</H3>
+<PRE>
+void <B>setCorrected</B>(boolean&nbsp;aCorrected)</PRE>
+<DL>
+<DD>Set the corrected flag for this FXHistoryPoint
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>aCorrected</CODE> - (new value)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+java.lang.String <B>toString</B>()</PRE>
+<DL>
+<DD>Returns a String representation of this <CODE>FXHistoryPoint</CODE> as follows:
  <BR>
- <CODE>timestamp max_bid max_ask open_bid open_ask close_bid close_ask min_bid min_ask</CODE></div>
+ <CODE>timestamp max_bid max_ask open_bid open_ask close_bid close_ask min_bid min_ask volume</CODE></div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
