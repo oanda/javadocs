@@ -205,8 +205,8 @@ public Vector<? extends FXHistoryPoint> caseGetHistory() {
 	}
 
 	if (history != null && history.size() > 0) {
-		System.out.println("Time|MaxBid|MaxAsk|OpenBid|OpenAsk|CloseBid|CloseAsk|MinBid|MinAsk");
-		System.out.println("------------------------------------------------------------------");
+		System.out.println("Time|MaxBid|MaxAsk|OpenBid|OpenAsk|CloseBid|CloseAsk|MinBid|MinAsk|Volume");
+		System.out.println("--------------------------------------------------------------------------");
 		int i = 0;
 		for (; i < history.size() - 1; i++) {
 			System.out.println(history.elementAt(i));
@@ -815,7 +815,7 @@ public void caseToggleDebugMsg() {
 private void init(String username, String password) {
 
 	try {
-        com.oanda.fxtrade.api.Configuration.setVersion("2.3.9");
+        	com.oanda.fxtrade.api.Configuration.setVersion("2.6.0..11");
 
 		System.out.println("Example: creating FXClient object...");
 
